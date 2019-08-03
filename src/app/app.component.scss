@@ -1,0 +1,14 @@
+.contenido
+{
+    margin-top: 32px;
+    margin-left: 232px;
+    margin-right: 48px;
+}
+
+@media (max-width: 600px){
+        .contenido{
+        margin-top: 16px;
+        margin-left: 16px;
+        margin-right: 32px;
+    }
+}

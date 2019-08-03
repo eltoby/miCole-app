@@ -1,0 +1,32 @@
+<div *ngIf="recorrido">
+
+  <form #f="ngForm">
+    <mat-form-field class="all-width">
+      <input matInput #nombre = ngModel
+            placeholder="Nombre"
+            name="nombre"
+            [ngModel]="recorrido.nombre"
+            required
+      >
+      <mat-error *ngIf="nombre.invalid">Debe ingresar el nombre
+      </mat-error>
+
+    </mat-form-field>
+    
+    <div>
+        <br/><br>
+        <button mat-button class="btn btn-default"
+                (click) = "Regresar()">
+              Cancelar
+        </button>
+        <button mat-button color="primary"
+                [disabled]="f.invalid"
+                (click) = "Guardar(f.value)"
+                class="btn btn-primary">
+              Aceptar
+        </button>
+        </div>
+  </form>
+
+</div>
+
